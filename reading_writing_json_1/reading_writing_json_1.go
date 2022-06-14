@@ -17,6 +17,7 @@ func main() {
 	http.HandleFunc("/helloworld", helloWorldHandler)
 
 	log.Printf("Starting server on port %d", port)
+	// Fatal의 경우 fmt.Print 후 os.Exit(1)을 호출 한 것과 같은 기능
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", port), nil))
 }
 
